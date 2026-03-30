@@ -1,120 +1,1203 @@
-Lock in — July 11
-136 lbs · recomposition · knee-safe · stronger physically & mentally
-—
-DAYS TO GO
-Today
-Workouts
-Nutrition
-Meal prep
-Progress
-TODAY'S OVERVIEW
-0/5
-Prayers
-0
-Steps
-—
-Learning
-—
-Workout
-—
-Recovery
-DAILY PRAYERS
-Period mode: off
-Tap to enable — prayers paused during your cycle
 
-فجر
-Fajr
-Pre-dawn
-ظهر
-Zuhr
-Midday
-عصر
-Asr
-Afternoon
-مغرب
-Maghrib
-Sunset
-عشاء
-Isha
-Night
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lock In — July 11</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream: #F5F0E8; --warm-white: #FAFAF7; --charcoal: #1C1C1A;
+  --stone: #6B6860; --sage: #7A8C6E; --sage-light: #EBF0E6;
+  --terra: #C4674A; --terra-light: #F5EAE5;
+  --gold: #C4A35A; --gold-light: #F5EDD8;
+  --slate: #4A6580; --slate-light: #E5EDF5;
+  --purple: #7C6B9E; --purple-light: #EDE9F7;
+  --border: rgba(28,28,26,0.1); --shadow: 0 2px 20px rgba(28,28,26,0.06);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--charcoal);min-height:100vh;font-size:14px;line-height:1.6;}
 
-ISLAMIC LEARNING — 10 MIN TODAY
-        Lecture / video
-        Quran reading
-        Islamic book
-        Podcast / audio
-        Study notes
-      
+/* HEADER */
+.hdr{background:var(--charcoal);color:var(--cream);padding:1.5rem 1.5rem 1rem;position:sticky;top:0;z-index:100;}
+.hdr-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:.75rem;margin-bottom:1rem;}
+.hdr h1{font-family:'DM Serif Display',serif;font-size:1.6rem;font-weight:400;line-height:1.1;}
+.hdr h1 em{font-style:italic;color:var(--gold);}
+.hdr-sub{font-size:11px;color:rgba(245,240,232,0.4);margin-top:3px;}
+.ctd{text-align:right;}
+.ctd-num{font-family:'DM Serif Display',serif;font-size:2.4rem;color:var(--gold);line-height:1;}
+.ctd-lbl{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:rgba(245,240,232,0.4);margin-top:2px;}
+.nav{display:flex;gap:4px;flex-wrap:wrap;}
+.nb{font-family:'DM Sans',sans-serif;font-size:12px;padding:6px 13px;border-radius:20px;border:1px solid rgba(245,240,232,0.15);background:transparent;color:rgba(245,240,232,0.55);cursor:pointer;transition:all .2s;}
+.nb:hover{color:var(--cream);background:rgba(245,240,232,0.08);}
+.nb.active{background:var(--gold);color:var(--charcoal);border-color:var(--gold);font-weight:500;}
 
+/* LAYOUT */
+.main{max-width:880px;margin:0 auto;padding:1.25rem 1rem 4rem;}
+.page{display:none;}.page.active{display:block;}
+.sec{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--stone);margin:1.4rem 0 .7rem;}
 
-Log
+/* CARDS */
+.card{background:var(--warm-white);border:1px solid var(--border);border-radius:14px;padding:14px 16px;margin-bottom:10px;}
+.card-title{font-family:'DM Serif Display',serif;font-size:1.05rem;font-weight:400;margin-bottom:10px;}
 
-Today's learning
-0 min / 10 min goal
+/* STAT GRID */
+.stat-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;margin-bottom:1rem;}
+.stat{background:var(--warm-white);border:1px solid var(--border);border-radius:12px;padding:12px;text-align:center;}
+.stat-n{font-family:'DM Serif Display',serif;font-size:1.7rem;line-height:1;}
+.stat-n.g{color:var(--sage)}.stat-n.go{color:var(--gold)}.stat-n.t{color:var(--terra)}.stat-n.p{color:var(--purple)}
+.stat-l{font-size:11px;color:var(--stone);margin-top:3px;}
 
-STEPS — 10,000 DAILY GOAL
+/* WEEK GRID */
+.week-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;margin-bottom:.5rem;}
+.wd{border-radius:10px;padding:9px 5px;text-align:center;border:1px solid var(--border);background:var(--warm-white);cursor:pointer;transition:all .2s;position:relative;}
+.wd:hover{transform:translateY(-2px);box-shadow:var(--shadow);}
+.wd.lift{background:var(--slate-light);border-color:rgba(74,101,128,.2);}
+.wd.dance{background:var(--gold-light);border-color:rgba(196,163,90,.2);}
+.wd.yoga{background:var(--sage-light);border-color:rgba(122,140,110,.2);}
+.wd.cardio{background:var(--terra-light);border-color:rgba(196,103,74,.2);}
+.wd.rest{background:var(--cream);}
+.wd.done::after{content:'✓';position:absolute;top:3px;right:5px;font-size:9px;color:var(--sage);font-weight:700;}
+.wd-lbl{font-size:10px;font-weight:600;letter-spacing:.04em;color:var(--stone);margin-bottom:3px;}
+.wd-type{font-size:11px;font-weight:500;line-height:1.3;color:var(--charcoal);}
+.wd-sub{font-size:10px;color:var(--stone);margin-top:2px;}
 
-Log
-0 steps
-Goal: 10,000
+/* BADGE */
+.badge{font-size:10px;font-weight:600;padding:2px 9px;border-radius:20px;letter-spacing:.03em;text-transform:uppercase;white-space:nowrap;}
+.b-slate{background:var(--slate-light);color:var(--slate);}
+.b-sage{background:var(--sage-light);color:var(--sage);}
+.b-terra{background:var(--terra-light);color:var(--terra);}
+.b-gold{background:var(--gold-light);color:#7a5e1a;}
+.b-purple{background:var(--purple-light);color:var(--purple);}
 
+/* CHECK ROWS */
+.cr{display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:1px solid var(--border);cursor:pointer;transition:background .15s;border-radius:4px;}
+.cr:last-child{border-bottom:none;}
+.cr:hover{background:rgba(122,140,110,.04);}
+.cb{width:18px;height:18px;border:1.5px solid var(--border);border-radius:4px;flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;transition:all .2s;background:white;}
+.cr.checked .cb{background:var(--sage);border-color:var(--sage);}
+.cr.checked .cb::after{content:'✓';font-size:10px;color:white;font-weight:700;}
+.cr.checked .cl{text-decoration:line-through;color:var(--stone);}
+.cl{font-size:13px;flex:1;}
+.cs{font-size:11px;color:var(--stone);display:block;margin-top:1px;}
 
-WHOOP LOG — LOG EACH MORNING
-RECOVERY %
-SLEEP %
-HRV (MS)
-NOTE (OPTIONAL)
-ATTACH WHOOP SCREENSHOT
-Tap to upload your Whoop screenshots
-Recovery, Sleep, HRV, Strain — any screen
-Save today's log
+/* PRAYER SPECIFIC */
+.prayer-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-bottom:.75rem;}
+.prayer-btn{border-radius:10px;padding:10px 6px;text-align:center;border:1.5px solid var(--border);background:var(--warm-white);cursor:pointer;transition:all .2s;}
+.prayer-btn:hover{border-color:var(--purple);background:var(--purple-light);}
+.prayer-btn.prayed{background:var(--purple);border-color:var(--purple);}
+.prayer-btn.prayed .p-name{color:white;}
+.prayer-btn.prayed .p-time{color:rgba(255,255,255,.7);}
+.prayer-btn.period-exempt{background:var(--terra-light);border-color:rgba(196,103,74,.3);opacity:.7;cursor:default;}
+.prayer-btn.period-exempt .p-name{color:var(--terra);}
+.p-name{font-size:12px;font-weight:600;color:var(--charcoal);}
+.p-arabic{font-size:14px;color:var(--purple);margin-bottom:2px;}
+.p-time{font-size:10px;color:var(--stone);}
 
-THIS WEEK — TAP TO MARK DONE
-Mon
-Glute & posterior
-Lift · 55 min
-Tue
-Upper body
-Lift · 50 min
-Wed
-Dance night
-Class · PM
-Thu
-Full body + intervals
-Lift · 60 min
-Fri
-Rest or walk
-Optional
-Sat
-Cardio / active
-Bike, row, walk
-Sun
-Active recovery
-Yoga / pilates
-WHOOP RECOVERY GUIDE
-67%+
-GREEN
-Train as programmed. Push top sets.
-50–66%
-YELLOW
-Drop 1 set per exercise. Skip bike finisher.
-Below 50%
-RED
-Active recovery only. Walk, stretch, pilates.
-DAILY NON-NEGOTIABLES
-All 5 prayers completed (or period exemption active)
-Fajr · Zuhr · Asr · Maghrib · Isha
-10 min Islamic learning done
-Lecture, reading, podcast, or study notes
-10,000 steps reached
-Counts dance, walking, gym — everything
-2.5–3L water consumed
-Biggest factor for reducing bloat and puffiness
-120–130g protein hit across 4–5 meals
-No protein powder as primary source — whole foods
-Post-workout meal within 45 min (lift days only)
-Protein + carbs within the window on Mon, Tue, Thu
-Cottage cheese or Greek yogurt before bed
-Casein feeds muscle repair overnight — at least 4 nights/week
-Whoop data logged this morning
-Recovery %, sleep %, HRV — adjust today's training accordingly
+/* PERIOD TOGGLE */
+.period-bar{display:flex;align-items:center;justify-content:space-between;background:var(--terra-light);border:1px solid rgba(196,103,74,.2);border-radius:10px;padding:10px 14px;margin-bottom:.75rem;cursor:pointer;}
+.period-bar-text{font-size:12px;color:var(--terra);font-weight:500;}
+.period-bar-sub{font-size:11px;color:rgba(196,103,74,.7);}
+.toggle-track{position:relative;width:36px;height:20px;background:rgba(196,103,74,.3);border-radius:10px;transition:background .2s;flex-shrink:0;}
+.toggle-track.on{background:var(--terra);}
+.toggle-thumb{position:absolute;top:2px;left:2px;width:16px;height:16px;background:white;border-radius:50%;transition:transform .2s;}
+.toggle-track.on .toggle-thumb{transform:translateX(16px);}
+
+/* STEPS */
+.steps-input-row{display:flex;gap:8px;align-items:center;margin-bottom:8px;}
+.steps-bar{height:8px;background:var(--border);border-radius:10px;overflow:hidden;margin-bottom:4px;}
+.steps-fill{height:100%;border-radius:10px;background:var(--sage);transition:width .4s;}
+
+/* WHOOP LOG */
+.whoop-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:8px;}
+.wi{border:1px solid var(--border);border-radius:8px;padding:8px 10px;font-family:'DM Sans',sans-serif;font-size:13px;background:var(--warm-white);outline:none;width:100%;}
+.wi:focus{border-color:var(--sage);}
+.whoop-entry{background:var(--warm-white);border:1px solid var(--border);border-radius:10px;padding:10px 12px;margin-bottom:6px;}
+.we-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;}
+.we-date{font-size:11px;font-weight:600;color:var(--stone);}
+.we-rec{font-size:14px;font-weight:600;}
+.rec-green{color:var(--sage)}.rec-yellow{color:var(--gold)}.rec-red{color:var(--terra)}
+.we-stats{display:flex;gap:12px;font-size:11px;color:var(--stone);}
+.we-note{font-size:12px;color:var(--charcoal);margin-top:6px;padding-top:6px;border-top:1px solid var(--border);}
+.img-thumb{width:60px;height:60px;border-radius:6px;object-fit:cover;margin-top:6px;cursor:pointer;}
+
+/* IMAGE UPLOAD */
+.img-upload-area{border:1.5px dashed var(--border);border-radius:10px;padding:14px;text-align:center;cursor:pointer;transition:all .2s;margin-bottom:8px;}
+.img-upload-area:hover{border-color:var(--sage);background:var(--sage-light);}
+.img-upload-area input{display:none;}
+.img-upload-label{font-size:12px;color:var(--stone);}
+.img-preview-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;}
+
+/* PROGRESS BARS */
+.pb-wrap{margin:6px 0 4px;}
+.pb-lbl{display:flex;justify-content:space-between;font-size:11px;color:var(--stone);margin-bottom:4px;}
+.pb{height:6px;background:var(--border);border-radius:10px;overflow:hidden;}
+.pb-fill{height:100%;border-radius:10px;background:var(--sage);transition:width .4s;}
+.pb-fill.go{background:var(--gold)}.pb-fill.t{background:var(--terra)}.pb-fill.p{background:var(--purple)}
+
+/* EX TABLE */
+.et{width:100%;border-collapse:collapse;}
+.et th{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--stone);padding:0 8px 7px 0;border-bottom:1px solid var(--border);text-align:left;}
+.et td{padding:9px 8px 9px 0;border-bottom:1px solid var(--border);vertical-align:top;font-size:13px;}
+.et tr:last-child td{border-bottom:none;}
+.en{font-weight:500;display:block;}
+.enote{font-size:11px;color:var(--stone);margin-top:2px;display:block;}
+.eprog{font-size:11px;color:var(--slate);margin-top:2px;display:block;}
+.ewarn{font-size:11px;color:var(--terra);margin-top:2px;display:block;}
+
+/* MEAL */
+.meal{background:var(--warm-white);border:1px solid var(--border);border-radius:12px;padding:13px;margin-bottom:8px;}
+.meal-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:7px;}
+.meal-name{font-weight:600;font-size:13px;}
+.meal-time{font-size:11px;color:var(--stone);}
+.mpills{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:7px;}
+.mp{font-size:10px;font-weight:600;padding:2px 8px;border-radius:20px;}
+.mp-p{background:var(--sage-light);color:var(--sage);}
+.mp-c{background:var(--slate-light);color:var(--slate);}
+.mp-f{background:var(--gold-light);color:#7a5e1a;}
+.mp-k{background:var(--cream);color:var(--stone);border:1px solid var(--border);}
+.meal-body{font-size:12px;color:var(--stone);line-height:1.8;}
+.meal-note{font-size:11px;color:var(--slate);margin-top:5px;font-style:italic;}
+
+/* INPUTS */
+.inp{border:1px solid var(--border);border-radius:8px;padding:8px 11px;font-family:'DM Sans',sans-serif;font-size:13px;background:var(--warm-white);outline:none;transition:border-color .2s;}
+.inp:focus{border-color:var(--sage);}
+.btn{padding:8px 16px;border-radius:8px;border:1px solid var(--border);background:var(--charcoal);color:var(--cream);font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;cursor:pointer;transition:all .2s;}
+.btn:hover{background:var(--sage);border-color:var(--sage);}
+.btn-o{background:transparent;color:var(--charcoal);}
+.btn-o:hover{background:var(--sage-light);border-color:var(--sage);color:var(--sage);}
+.btn-sm{padding:6px 12px;font-size:11px;}
+
+/* PHASE BANNER */
+.phase-banner{background:var(--charcoal);color:var(--cream);border-radius:12px;padding:13px 15px;margin-bottom:1rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+.pb-title{font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--gold);}
+.pb-desc{font-size:12px;color:rgba(245,240,232,.55);margin-top:2px;}
+.pb-dates{font-size:12px;color:rgba(245,240,232,.4);text-align:right;}
+
+/* RECOVERY CARDS */
+.rec-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:1rem;}
+.rc{border-radius:10px;padding:11px;text-align:center;border:1px solid var(--border);}
+.rc.g{background:var(--sage-light);border-color:rgba(122,140,110,.3);}
+.rc.y{background:var(--gold-light);border-color:rgba(196,163,90,.3);}
+.rc.r{background:var(--terra-light);border-color:rgba(196,103,74,.3);}
+.rc-score{font-family:'DM Serif Display',serif;font-size:1.3rem;margin-bottom:3px;}
+.rc.g .rc-score{color:var(--sage)}.rc.y .rc-score{color:#7a5e1a}.rc.r .rc-score{color:var(--terra)}
+.rc-act{font-size:11px;color:var(--stone);line-height:1.4;}
+
+/* TIP */
+.tip{background:var(--sage-light);border-left:3px solid var(--sage);border-radius:8px;padding:10px 12px;font-size:12px;color:#4a6040;line-height:1.6;margin-bottom:1rem;}
+.tip-gold{background:var(--gold-light);border-left:3px solid var(--gold);color:#6b4e15;}
+.tip-purple{background:var(--purple-light);border-left:3px solid var(--purple);color:#4a3870;}
+
+/* PROTEIN GRID */
+.prot-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.prot-card{background:var(--warm-white);border:1px solid var(--border);border-radius:10px;padding:11px;}
+.prot-cat{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--stone);margin-bottom:7px;}
+.prot-row{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--border);font-size:12px;}
+.prot-row:last-child{border-bottom:none;}
+.prot-amt{color:var(--sage);font-weight:600;}
+
+/* PREP GRID */
+.prep-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+
+/* NOTES */
+.notes-area{width:100%;border:1px solid var(--border);border-radius:8px;padding:10px;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--charcoal);background:var(--warm-white);resize:vertical;min-height:80px;outline:none;transition:border-color .2s;}
+.notes-area:focus{border-color:var(--sage);}
+
+/* DAILY SUMMARY RING */
+.summary-bar{display:flex;gap:6px;margin-bottom:1rem;flex-wrap:wrap;}
+.s-pill{flex:1;min-width:70px;border-radius:10px;padding:8px 10px;text-align:center;border:1px solid var(--border);background:var(--warm-white);}
+.s-pill-n{font-size:16px;font-weight:600;}
+.s-pill-l{font-size:10px;color:var(--stone);margin-top:1px;}
+
+/* TABS inside page */
+.tab-row{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:1rem;}
+.tab{font-size:12px;padding:5px 12px;border-radius:20px;border:1px solid var(--border);cursor:pointer;background:var(--cream);color:var(--stone);transition:all .15s;}
+.tab.active{background:var(--charcoal);color:var(--cream);border-color:var(--charcoal);}
+.tpanel{display:none;}.tpanel.active{display:block;}
+
+/* Islamic LEARNING LOG */
+.learn-entry{padding:8px 0;border-bottom:1px solid var(--border);font-size:12px;}
+.learn-entry:last-child{border-bottom:none;}
+.learn-date{font-size:10px;font-weight:600;color:var(--stone);text-transform:uppercase;letter-spacing:.05em;}
+.learn-type{font-size:10px;padding:1px 7px;border-radius:20px;background:var(--purple-light);color:var(--purple);font-weight:600;display:inline-block;margin-left:6px;}
+.learn-note{color:var(--charcoal);margin-top:3px;line-height:1.5;}
+
+/* WEIGHT LOG */
+.wl-entry{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--border);font-size:12px;}
+.wl-entry:last-child{border-bottom:none;}
+
+@media(max-width:600px){
+  .week-grid{grid-template-columns:repeat(4,1fr);}
+  .prayer-grid{grid-template-columns:repeat(3,1fr);}
+  .prep-grid,.prot-grid{grid-template-columns:1fr;}
+  .rec-row{grid-template-columns:1fr;}
+  .whoop-grid{grid-template-columns:1fr 1fr;}
+  .stat-row{grid-template-columns:repeat(2,1fr);}
+}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <div class="hdr-top">
+    <div>
+      <h1>Lock in — <em>July 11</em></h1>
+      <div class="hdr-sub">136 lbs · recomposition · knee-safe · stronger physically & mentally</div>
+    </div>
+    <div class="ctd">
+      <div class="ctd-num" id="daysLeft">—</div>
+      <div class="ctd-lbl">days to go</div>
+    </div>
+  </div>
+  <nav class="nav">
+    <button class="nb active" onclick="showPage('today')">Today</button>
+    <button class="nb" onclick="showPage('workouts')">Workouts</button>
+    <button class="nb" onclick="showPage('nutrition')">Nutrition</button>
+    <button class="nb" onclick="showPage('mealprep')">Meal prep</button>
+    <button class="nb" onclick="showPage('progress')">Progress</button>
+  </nav>
+</div>
+
+<div class="main">
+
+<!-- ══════════════════════════════════════
+     TODAY PAGE
+══════════════════════════════════════ -->
+<div id="page-today" class="page active">
+
+  <!-- Daily summary pills -->
+  <div class="sec">Today's overview</div>
+  <div class="summary-bar">
+    <div class="s-pill"><div class="s-pill-n" id="sum-prayers" style="color:var(--purple);">0/5</div><div class="s-pill-l">Prayers</div></div>
+    <div class="s-pill"><div class="s-pill-n" id="sum-steps" style="color:var(--sage);">0</div><div class="s-pill-l">Steps</div></div>
+    <div class="s-pill"><div class="s-pill-n" id="sum-learn" style="color:var(--gold);">—</div><div class="s-pill-l">Learning</div></div>
+    <div class="s-pill"><div class="s-pill-n" id="sum-workout" style="color:var(--slate);">—</div><div class="s-pill-l">Workout</div></div>
+    <div class="s-pill"><div class="s-pill-n" id="sum-recovery" style="color:var(--terra);">—</div><div class="s-pill-l">Recovery</div></div>
+  </div>
+
+  <!-- PRAYER TRACKER -->
+  <div class="sec">Daily prayers</div>
+
+  <div class="period-bar" onclick="togglePeriod()" id="periodBar">
+    <div>
+      <div class="period-bar-text" id="periodText">Period mode: off</div>
+      <div class="period-bar-sub" id="periodSub">Tap to enable — prayers paused during your cycle</div>
+    </div>
+    <div class="toggle-track" id="periodToggle"><div class="toggle-thumb"></div></div>
+  </div>
+
+  <div class="prayer-grid" id="prayerGrid">
+    <div class="prayer-btn" id="p-fajr" onclick="togglePrayer('fajr')">
+      <div class="p-arabic">فجر</div>
+      <div class="p-name">Fajr</div>
+      <div class="p-time">Pre-dawn</div>
+    </div>
+    <div class="prayer-btn" id="p-zuhr" onclick="togglePrayer('zuhr')">
+      <div class="p-arabic">ظهر</div>
+      <div class="p-name">Zuhr</div>
+      <div class="p-time">Midday</div>
+    </div>
+    <div class="prayer-btn" id="p-asr" onclick="togglePrayer('asr')">
+      <div class="p-arabic">عصر</div>
+      <div class="p-name">Asr</div>
+      <div class="p-time">Afternoon</div>
+    </div>
+    <div class="prayer-btn" id="p-maghrib" onclick="togglePrayer('maghrib')">
+      <div class="p-arabic">مغرب</div>
+      <div class="p-name">Maghrib</div>
+      <div class="p-time">Sunset</div>
+    </div>
+    <div class="prayer-btn" id="p-isha" onclick="togglePrayer('isha')">
+      <div class="p-arabic">عشاء</div>
+      <div class="p-name">Isha</div>
+      <div class="p-time">Night</div>
+    </div>
+  </div>
+  <div id="prayerMsg" style="font-size:12px;color:var(--purple);margin-bottom:.5rem;min-height:18px;"></div>
+
+  <!-- ISLAMIC LEARNING -->
+  <div class="sec">Islamic learning — 10 min today</div>
+  <div class="card">
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;">
+      <select class="inp" id="learnType" style="flex:1;min-width:120px;">
+        <option value="lecture">Lecture / video</option>
+        <option value="reading">Quran reading</option>
+        <option value="book">Islamic book</option>
+        <option value="podcast">Podcast / audio</option>
+        <option value="notes">Study notes</option>
+      </select>
+      <input class="inp" id="learnMinutes" type="number" placeholder="Minutes" min="1" max="120" style="width:90px;">
+      <div style="flex:1;min-width:180px;">
+        <input class="inp" id="learnTopic" placeholder="Topic or what you learned" style="width:100%;">
+      </div>
+      <button class="btn btn-sm" onclick="logLearning()">Log</button>
+    </div>
+    <div id="learnDone" style="font-size:12px;color:var(--sage);margin-bottom:8px;min-height:16px;"></div>
+    <div class="pb-wrap">
+      <div class="pb-lbl"><span>Today's learning</span><span id="learnMinsLabel">0 min / 10 min goal</span></div>
+      <div class="pb"><div class="pb-fill p" id="learnBar" style="width:0%;background:var(--purple);"></div></div>
+    </div>
+  </div>
+
+  <!-- STEPS -->
+  <div class="sec">Steps — 10,000 daily goal</div>
+  <div class="card">
+    <div class="steps-input-row">
+      <input class="inp" type="number" id="stepsInput" placeholder="Enter steps" min="0" max="50000" style="flex:1;">
+      <button class="btn btn-sm" onclick="logSteps()">Log</button>
+    </div>
+    <div class="pb-wrap">
+      <div class="pb-lbl"><span id="stepsLabel">0 steps</span><span>Goal: 10,000</span></div>
+      <div class="pb"><div class="pb-fill" id="stepsBar" style="width:0%;"></div></div>
+    </div>
+    <div id="stepsMsg" style="font-size:12px;color:var(--stone);margin-top:4px;min-height:16px;"></div>
+  </div>
+
+  <!-- WHOOP LOG -->
+  <div class="sec">Whoop log — log each morning</div>
+  <div class="card">
+    <div class="whoop-grid">
+      <div>
+        <div style="font-size:10px;font-weight:600;color:var(--stone);margin-bottom:4px;text-transform:uppercase;letter-spacing:.05em;">Recovery %</div>
+        <input class="wi" type="number" id="wRec" placeholder="e.g. 68" min="0" max="100">
+      </div>
+      <div>
+        <div style="font-size:10px;font-weight:600;color:var(--stone);margin-bottom:4px;text-transform:uppercase;letter-spacing:.05em;">Sleep %</div>
+        <input class="wi" type="number" id="wSleep" placeholder="e.g. 79" min="0" max="100">
+      </div>
+      <div>
+        <div style="font-size:10px;font-weight:600;color:var(--stone);margin-bottom:4px;text-transform:uppercase;letter-spacing:.05em;">HRV (ms)</div>
+        <input class="wi" type="number" id="wHRV" placeholder="e.g. 52" min="0" max="200">
+      </div>
+    </div>
+    <div style="margin-bottom:10px;">
+      <div style="font-size:10px;font-weight:600;color:var(--stone);margin-bottom:4px;text-transform:uppercase;letter-spacing:.05em;">Note (optional)</div>
+      <input class="inp" id="wNote" placeholder="How you felt, anything notable..." style="width:100%;">
+    </div>
+
+    <!-- Screenshot upload -->
+    <div style="font-size:10px;font-weight:600;color:var(--stone);margin-bottom:6px;text-transform:uppercase;letter-spacing:.05em;">Attach Whoop screenshot</div>
+    <div class="img-upload-area" onclick="document.getElementById('whoopImgInput').click()">
+      <input type="file" id="whoopImgInput" accept="image/*" multiple onchange="previewWhoopImgs(event)">
+      <div class="img-upload-label">Tap to upload your Whoop screenshots<br><span style="font-size:10px;opacity:.6;">Recovery, Sleep, HRV, Strain — any screen</span></div>
+    </div>
+    <div class="img-preview-row" id="whoopImgPreview"></div>
+
+    <button class="btn btn-sm" onclick="logWhoop()" style="margin-top:8px;">Save today's log</button>
+    <div id="whoopMsg" style="font-size:12px;color:var(--sage);margin-top:6px;min-height:16px;"></div>
+  </div>
+
+  <!-- WEEKLY SCHEDULE -->
+  <div class="sec">This week — tap to mark done</div>
+  <div class="week-grid">
+    <div class="wd lift" onclick="toggleDay(this,'mon')"><div class="wd-lbl">Mon</div><div class="wd-type">Glute & posterior</div><div class="wd-sub">Lift · 55 min</div></div>
+    <div class="wd lift" onclick="toggleDay(this,'tue')"><div class="wd-lbl">Tue</div><div class="wd-type">Upper body</div><div class="wd-sub">Lift · 50 min</div></div>
+    <div class="wd dance" onclick="toggleDay(this,'wed')"><div class="wd-lbl">Wed</div><div class="wd-type">Dance night</div><div class="wd-sub">Class · PM</div></div>
+    <div class="wd lift" onclick="toggleDay(this,'thu')"><div class="wd-lbl">Thu</div><div class="wd-type">Full body + intervals</div><div class="wd-sub">Lift · 60 min</div></div>
+    <div class="wd rest" onclick="toggleDay(this,'fri')"><div class="wd-lbl">Fri</div><div class="wd-type">Rest or walk</div><div class="wd-sub">Optional</div></div>
+    <div class="wd cardio" onclick="toggleDay(this,'sat')"><div class="wd-lbl">Sat</div><div class="wd-type">Cardio / active</div><div class="wd-sub">Bike, row, walk</div></div>
+    <div class="wd yoga" onclick="toggleDay(this,'sun')"><div class="wd-lbl">Sun</div><div class="wd-type">Active recovery</div><div class="wd-sub">Yoga / pilates</div></div>
+  </div>
+
+  <!-- WHOOP RECOVERY RULES -->
+  <div class="sec">Whoop recovery guide</div>
+  <div class="rec-row">
+    <div class="rc g"><div class="rc-score">67%+</div><div style="font-size:10px;font-weight:600;color:var(--sage);margin-bottom:3px;">GREEN</div><div class="rc-act">Train as programmed. Push top sets.</div></div>
+    <div class="rc y"><div class="rc-score">50–66%</div><div style="font-size:10px;font-weight:600;color:#7a5e1a;margin-bottom:3px;">YELLOW</div><div class="rc-act">Drop 1 set per exercise. Skip bike finisher.</div></div>
+    <div class="rc r"><div class="rc-score">Below 50%</div><div style="font-size:10px;font-weight:600;color:var(--terra);margin-bottom:3px;">RED</div><div class="rc-act">Active recovery only. Walk, stretch, pilates.</div></div>
+  </div>
+
+  <!-- DAILY CHECKLIST -->
+  <div class="sec">Daily non-negotiables</div>
+  <div class="card">
+    <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">All 5 prayers completed (or period exemption active)<span class="cs">Fajr · Zuhr · Asr · Maghrib · Isha</span></div></div>
+    <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">10 min Islamic learning done<span class="cs">Lecture, reading, podcast, or study notes</span></div></div>
+    <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">10,000 steps reached<span class="cs">Counts dance, walking, gym — everything</span></div></div>
+    <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">2.5–3L water consumed<span class="cs">Biggest factor for reducing bloat and puffiness</span></div></div>
+    <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">120–130g protein hit across 4–5 meals<span class="cs">No protein powder as primary source — whole foods</span></div></div>
+    <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Post-workout meal within 45 min (lift days only)<span class="cs">Protein + carbs within the window on Mon, Tue, Thu</span></div></div>
+    <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Cottage cheese or Greek yogurt before bed<span class="cs">Casein feeds muscle repair overnight — at least 4 nights/week</span></div></div>
+    <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Whoop data logged this morning<span class="cs">Recovery %, sleep %, HRV — adjust today's training accordingly</span></div></div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     WORKOUTS PAGE
+══════════════════════════════════════ -->
+<div id="page-workouts" class="page">
+  <div class="phase-banner">
+    <div><div class="pb-title">Rebuilt for your body</div><div class="pb-desc">Slow responder · midsection definition · glute lift · upper body catch-up</div></div>
+    <div class="pb-dates">Higher reps · time under tension · consistent overload</div>
+  </div>
+
+  <div class="tip tip-gold" style="margin-bottom:1rem;">Your body responds to consistency and metabolic stress — not just heavy weight. Every exercise has a 3-second eccentric (lowering phase). This is the main driver of definition for slow responders. Don't rush the reps.</div>
+
+  <div class="tab-row">
+    <div class="tab active" onclick="showTab('w','mon2')">Mon — glute &amp; core</div>
+    <div class="tab" onclick="showTab('w','tue2')">Tue — upper + core</div>
+    <div class="tab" onclick="showTab('w','thu2')">Thu — full body</div>
+    <div class="tab" onclick="showTab('w','prog2')">Progression</div>
+  </div>
+
+  <!-- MONDAY -->
+  <div id="w-mon2" class="tpanel active">
+    <div class="tip">Glute activation before every set — squeeze at the top for 1 full second. The core circuit at the end is not optional. This is what changes your midsection over 11 weeks.</div>
+    <div class="card">
+      <table class="et">
+        <thead><tr><th style="width:42%">Exercise</th><th style="width:24%">Weight</th><th>Sets × reps</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="en">Glute activation warm-up</span><span class="enote">Lateral band walks 15 each + glute bridge hold 30 sec × 3</span><span class="eprog">Non-negotiable — fires glutes before loading them</span></td>
+            <td>Light band</td><td>2 rounds</td>
+          </tr>
+          <tr>
+            <td><span class="en">Hip thrust — slow eccentric</span><span class="enote">3 sec down · 1 sec squeeze at top · chin tucked · pad on hips</span><span class="eprog">→ Add 5 lbs only when form is perfect for 2 full sessions in a row</span></td>
+            <td>185–200 lbs</td><td>4 × 12–15</td>
+          </tr>
+          <tr>
+            <td><span class="en">Seated leg curl — slow eccentric</span><span class="enote">3 sec lowering · full range · squeeze at top · don't let it snap back</span><span class="eprog">→ Replaces RDL. Machine guides the movement — you'll feel hamstrings immediately. This + hip thrust creates the glute-hamstring tie-in that gives the lifted look.</span></td>
+            <td>50–60 lbs</td><td>3 × 15</td>
+          </tr>
+          <tr>
+            <td><span class="en">Lying leg curl — slow eccentric</span><span class="enote">3 sec lowering · hips stay flat on pad · squeeze hard at top</span><span class="eprog">→ Paired with seated curl: hits hamstrings at two different lengths. Better than RDL for teaching the hamstring contraction pattern.</span></td>
+            <td>40–50 lbs</td><td>3 × 12–15</td>
+          </tr>
+          <tr>
+            <td><span class="en">Leg press — high and wide foot placement</span><span class="enote">Feet higher on plate = more glute · 3 sec down · never lock out</span><span class="ewarn">Knee: stop 20° before full extension every single rep</span></td>
+            <td>120–135 lbs</td><td>3 × 15</td>
+          </tr>
+          <tr>
+            <td><span class="en">Donkey kickback machine + hip abductor machine superset</span><span class="enote">Kickback 12 each side → abductor 15 reps → 45 sec rest. Squeeze glute at top of kickback for 1 sec.</span><span class="eprog">→ Replaces cable kickback. Machine guides the path so you'll actually feel glutes firing, not hip flexors.</span></td>
+            <td>30–40 lbs / 50 lbs</td><td>3 rounds</td>
+          </tr>
+          <tr>
+            <td><span class="en">Floor core circuit — midsection protocol</span><span class="enote">Dead bug 10 each · hollow body hold 30 sec · bicycle crunch 20 slow · no rest between movements</span><span class="eprog">Deep TVA work reduces cortisol-driven midsection bloat. Every lift day.</span></td>
+            <td>Bodyweight</td><td>3 rounds</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="card">
+      <div style="font-size:12px;font-weight:600;margin-bottom:8px;">Monday checklist</div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Band walks + glute bridge warm-up done</div></div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Hip thrust — 3 sec eccentric, 1 sec squeeze every rep</div></div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Seated leg curl — felt hamstrings, not lower back</div></div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Lying leg curl — hips stayed flat on pad</div></div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Leg press — high foot placement, no lockout</div></div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Kickback machine + abductor superset done</div></div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Floor core circuit — 3 rounds completed</div></div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Post-workout meal within 45 min</div></div>
+    </div>
+  </div>
+
+  <!-- TUESDAY -->
+  <div id="w-tue2" class="tpanel">
+    <div class="tip">Upper body is your weaker area. A wider back and rounder shoulders create the taper that makes your waist look smaller and your glutes look more defined by contrast. More volume here than before.</div>
+    <div class="card">
+      <table class="et">
+        <thead><tr><th style="width:42%">Exercise</th><th style="width:24%">Weight</th><th>Sets × reps</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="en">Lat pulldown — full range, slow eccentric</span><span class="enote">3 sec up · squeeze lats at bottom · elbows drive down · no momentum</span><span class="eprog">→ Wide back = visually smaller waist. Your most important upper body exercise.</span></td>
+            <td>70–75 lbs</td><td>4 × 12–15</td>
+          </tr>
+          <tr>
+            <td><span class="en">Seated cable row + reverse pec deck superset</span><span class="enote">Row 12 reps → reverse pec deck 15 reps immediately → 45 sec rest. On pec deck: sit facing pad, arms out, squeeze shoulder blades together.</span><span class="eprog">→ Reverse pec deck replaces face pulls. Same rear delt target, zero technique barrier — machine guides everything.</span></td>
+            <td>55 lbs / 30–40 lbs</td><td>3 rounds</td>
+          </tr>
+          <tr>
+            <td><span class="en">Barbell overhead press — strict form</span><span class="enote">Sit upright on bench · no arching · 3 sec down · bar to chin level · drive straight up</span><span class="ewarn">Bar starts at 45 lbs. Stay here until 3 × 12 is clean before adding weight. No rushing.</span></td>
+            <td>45 lbs (bar)</td><td>3 × 10–12</td>
+          </tr>
+          <tr>
+            <td><span class="en">Incline DB press — controlled tempo</span><span class="enote">3 sec down · 1 sec pause at chest · drive up without locking elbows</span><span class="eprog">→ Goal: 3 × 15 at 40 lbs each before moving to 45 lbs</span></td>
+            <td>40 lbs each</td><td>3 × 12–15</td>
+          </tr>
+          <tr>
+            <td><span class="en">Lateral raise — high reps, controlled</span><span class="enote">Lead with elbow · stop at shoulder height · 2 sec hold at top · no swinging</span><span class="eprog">→ High reps build the rounded shoulder cap that creates shape and definition</span></td>
+            <td>20–25 lbs</td><td>4 × 15–20</td>
+          </tr>
+          <tr>
+            <td><span class="en">Seated overhead DB tricep extension → hammer curl</span><span class="enote">Both hands on one DB overhead · 3 sec down behind head · 12 reps → immediately hammer curl 12 reps → 30 sec rest</span><span class="eprog">→ Overhead extension hits the long head of tricep which gives the arm that defined horseshoe shape</span></td>
+            <td>25–30 lbs / 15–20 lbs</td><td>3 rounds</td>
+          </tr>
+          <tr>
+            <td><span class="en">Floor core circuit — midsection protocol</span><span class="enote">Dead bug 10 each · hollow body hold 30 sec · bicycle crunch 20 slow</span></td>
+            <td>Bodyweight</td><td>3 rounds</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="card">
+      <div style="font-size:12px;font-weight:600;margin-bottom:8px;">Tuesday checklist</div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Lat pulldown — 3 sec eccentric, felt lats not biceps</div></div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Row + reverse pec deck superset — 3 rounds done</div></div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Barbell OHP — stayed at 45 lbs, focused on reps</div></div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Incline press + lateral raises done</div></div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Overhead tricep extension → hammer curl superset done</div></div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Floor core circuit — 3 rounds completed</div></div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Post-workout meal within 45 min</div></div>
+    </div>
+  </div>
+
+  <!-- THURSDAY -->
+  <div id="w-thu2" class="tpanel">
+    <div class="tip">Full body session. No RDLs today — replaced with a machine movement that teaches the same pattern without the form issues. Stair master finisher is your metabolic work — this is where the midsection changes happen week by week.</div>
+    <div class="card">
+      <table class="et">
+        <thead><tr><th style="width:42%">Exercise</th><th style="width:24%">Weight</th><th>Sets × reps</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="en">Hip thrust — moderate weight, higher reps</span><span class="enote">3 sec down · 1 sec squeeze · second session of hip thrusts in the week to drive volume</span><span class="eprog">→ Slightly lighter than Monday. Focus on perfect squeeze not load.</span></td>
+            <td>155–175 lbs</td><td>3 × 15</td>
+          </tr>
+          <tr>
+            <td><span class="en">Leg press machine — slow eccentric</span><span class="enote">High foot placement · 3 sec down · never lock out · feet shoulder-width</span><span class="ewarn">Knee: 20° bend at top, always</span></td>
+            <td>120–145 lbs</td><td>3 × 15</td>
+          </tr>
+          <tr>
+            <td><span class="en">Chest-supported DB row</span><span class="enote">Lie face down on incline bench · both arms · elbows drive back · 3 sec down · full stretch at bottom</span><span class="eprog">→ Removes lower back fatigue entirely — you'll actually feel it in your upper back</span></td>
+            <td>25–30 lbs each</td><td>3 × 12–15</td>
+          </tr>
+          <tr>
+            <td><span class="en">Hack squat — tempo reps</span><span class="enote">3 sec down · 1 sec pause at parallel · drive up · stop before lockout</span><span class="ewarn">Knee: parallel only · feet shoulder-width · no caving inward</span></td>
+            <td>80–100 lbs each side</td><td>3 × 12–15</td>
+          </tr>
+          <tr>
+            <td><span class="en">Push-up — slow eccentric</span><span class="enote">3 sec down · chest touches floor · full lockout at top · core rigid the whole time</span><span class="eprog">→ Too easy: elevate feet on bench. Too hard: hands elevated on bench.</span></td>
+            <td>Bodyweight</td><td>3 × 12–15</td>
+          </tr>
+          <tr>
+            <td><span class="en">Stair master intervals — definition finisher</span><span class="enote">2 min moderate pace → 1 min hard (fastest comfortable speed) → repeat. Don't hold the rails — engages glutes and core far more.</span><span class="eprog">→ Stair master is one of the best tools for glute definition and midsection fat loss simultaneously. Stay consistent with this every Thursday.</span></td>
+            <td>—</td><td>20 min · repeat cycle</td>
+          </tr>
+          <tr>
+            <td><span class="en">Floor core circuit — midsection protocol</span><span class="enote">Dead bug 10 each · side plank 30 sec each · bicycle crunch 20 slow</span></td>
+            <td>Bodyweight</td><td>3 rounds</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="card">
+      <div style="font-size:12px;font-weight:600;margin-bottom:8px;">Thursday checklist</div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Hip thrust — lighter than Monday, perfect squeeze every rep</div></div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Leg press — high foot, no lockout, 3 sec eccentric</div></div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Chest-supported row — felt it in upper back not arms</div></div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Hack squat — 3 sec eccentric, parallel depth only</div></div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Push-ups — all reps controlled, no rushing</div></div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Stair master — 20 min done, no holding rails</div></div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Floor core circuit — 3 rounds completed</div></div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Post-workout meal within 45 min</div></div>
+    </div>
+  </div>
+
+  <!-- PROGRESSION -->
+  <div id="w-prog2" class="tpanel">
+    <div class="tip tip-gold">Slow responders need progressive overload through reps before weight. Hit the top of your rep range for 2 sessions in a row → then add weight. Never jump mid-session. Consistency over intensity every time.</div>
+    <div class="card">
+      <div style="font-size:12px;font-weight:500;margin-bottom:10px;">The 3-second eccentric rule</div>
+      <div style="font-size:12px;color:var(--stone);line-height:1.7;margin-bottom:12px;">Every lowering phase of every exercise is 3 seconds. This is the single biggest change from your previous training. Time under tension — not just load — is what creates the lean, defined look in bodies that change slowly. It also reduces injury risk on your knees by controlling the load rather than dropping into it.</div>
+      <table class="et">
+        <thead><tr><th>Phase</th><th>Dates</th><th>Focus</th><th>Key rule</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Phase 1</strong></td><td style="font-size:11px;color:var(--stone);">Mar 24–Apr 20</td><td>Master tempo + form</td><td style="font-size:11px;">3 sec eccentric every rep. Build to top of rep range before adding weight. Core circuit every session. Deload wk 4.</td></tr>
+          <tr><td><strong>Phase 2</strong></td><td style="font-size:11px;color:var(--stone);">Apr 21–May 25</td><td>Supersets + metabolic stress</td><td style="font-size:11px;">All supersets added. Rower finisher every Thu. Upper body volume increases. Deload wk 9.</td></tr>
+          <tr><td><strong>Phase 3</strong></td><td style="font-size:11px;color:var(--stone);">May 26–Jul 11</td><td>Peak conditioning</td><td style="font-size:11px;">Push top of rep ranges. Add weight where earned. Taper final week — fewer sets, same weight.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="card">
+      <div style="font-size:12px;font-weight:500;margin-bottom:10px;">What changed and why</div>
+      <table class="et">
+        <thead><tr><th>Old program</th><th>Updated program</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td style="font-size:12px;">RDL (all versions)</td><td style="font-size:12px;">Seated + lying leg curl</td><td style="font-size:12px;color:var(--stone);">Machine-guided — you'll feel hamstrings immediately without needing to master hip hinge pattern first</td></tr>
+          <tr><td style="font-size:12px;">Cable kickback</td><td style="font-size:12px;">Donkey kickback machine</td><td style="font-size:12px;color:var(--stone);">Machine path means you feel glutes firing, not hip flexors — fixes the form issue completely</td></tr>
+          <tr><td style="font-size:12px;">Face pulls</td><td style="font-size:12px;">Reverse pec deck</td><td style="font-size:12px;color:var(--stone);">Same rear delt target, zero technique barrier — machine handles the form</td></tr>
+          <tr><td style="font-size:12px;">DB overhead press</td><td style="font-size:12px;">Barbell OHP at 45 lbs</td><td style="font-size:12px;color:var(--stone);">Bar starts at 45 lbs — build reps here before adding plates</td></tr>
+          <tr><td style="font-size:12px;">Tricep rope pushdown</td><td style="font-size:12px;">Seated overhead DB extension</td><td style="font-size:12px;color:var(--stone);">Overhead position hits the long head of tricep — gives arms the defined horseshoe shape</td></tr>
+          <tr><td style="font-size:12px;">Cable crunch</td><td style="font-size:12px;">Floor bicycle crunch</td><td style="font-size:12px;color:var(--stone);">Floor-based, no setup, genuinely effective for TVA and obliques</td></tr>
+          <tr><td style="font-size:12px;">Cable pull-through</td><td style="font-size:12px;">Hip thrust (second session)</td><td style="font-size:12px;color:var(--stone);">You already do hip thrusts well — second session at lighter weight drives volume for definition</td></tr>
+          <tr><td style="font-size:12px;">Rowing intervals</td><td style="font-size:12px;">Stair master intervals</td><td style="font-size:12px;color:var(--stone);">20 min 2:1 interval — best tool for simultaneous glute definition and midsection fat loss</td></tr>
+          <tr><td style="font-size:12px;">Everything in kg</td><td style="font-size:12px;">All weights in lbs</td><td style="font-size:12px;color:var(--stone);">Consistent throughout all three sessions</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     NUTRITION PAGE
+══════════════════════════════════════ -->
+<div id="page-nutrition" class="page">
+  <div class="stat-row">
+    <div class="stat"><div class="stat-n g">125g</div><div class="stat-l">Protein daily</div></div>
+    <div class="stat"><div class="stat-n go">1,900</div><div class="stat-l">Lift day kcal</div></div>
+    <div class="stat"><div class="stat-n t">1,700</div><div class="stat-l">Rest day kcal</div></div>
+    <div class="stat"><div class="stat-n">3L</div><div class="stat-l">Water daily</div></div>
+  </div>
+
+  <div class="tab-row">
+    <div class="tab active" onclick="showTab('n','nlift')">Lift days</div>
+    <div class="tab" onclick="showTab('n','ndance')">Dance day</div>
+    <div class="tab" onclick="showTab('n','nrest')">Rest days</div>
+    <div class="tab" onclick="showTab('n','nprot')">Protein sources</div>
+  </div>
+
+  <div id="n-nlift" class="tpanel active">
+    <div class="tip">Mon, Tue, Thu — eat more carbs. Your muscles need glycogen to lift heavy. Don't undereat on these days.</div>
+    <div class="meal"><div class="meal-hdr"><span class="meal-name">Breakfast</span><span class="meal-time">7–8am · 60–90 min before training</span></div><div class="mpills"><span class="mp mp-p">35g protein</span><span class="mp mp-c">45g carbs</span><span class="mp mp-f">12g fat</span><span class="mp mp-k">~430 kcal</span></div><div class="meal-body">3 whole eggs + 2 egg whites scrambled<br>1 cup oats with berries · black coffee or green tea</div><div class="meal-note">Swap: 200g Greek yogurt + oats + banana if lighter preferred</div></div>
+    <div class="meal"><div class="meal-hdr"><span class="meal-name">Pre-workout snack</span><span class="meal-time">30 min before gym</span></div><div class="mpills"><span class="mp mp-p">10g protein</span><span class="mp mp-c">25g carbs</span><span class="mp mp-k">~150 kcal</span></div><div class="meal-body">1 banana + 2 tbsp almond butter<br>OR rice cake + cottage cheese (2 tbsp)</div></div>
+    <div class="meal"><div class="meal-hdr"><span class="meal-name">Post-workout — most important meal</span><span class="meal-time">Within 45 min of finishing</span></div><div class="mpills"><span class="mp mp-p">40g protein</span><span class="mp mp-c">40g carbs</span><span class="mp mp-f">8g fat</span><span class="mp mp-k">~390 kcal</span></div><div class="meal-body">150g salmon or 200g chicken thigh or 250g firm tofu<br>¾ cup brown rice or sweet potato · large handful spinach or broccoli</div></div>
+    <div class="meal"><div class="meal-hdr"><span class="meal-name">Lunch</span><span class="meal-time">1–2pm</span></div><div class="mpills"><span class="mp mp-p">30g protein</span><span class="mp mp-c">30g carbs</span><span class="mp mp-f">14g fat</span><span class="mp mp-k">~370 kcal</span></div><div class="meal-body">Large salad: mixed greens, cucumber, bell pepper, cherry tomatoes<br>Tuna or 150g shrimp or 150g crispy tofu · ½ avocado + olive oil · ½ cup quinoa or lentils</div></div>
+    <div class="meal"><div class="meal-hdr"><span class="meal-name">Dinner</span><span class="meal-time">6–7pm</span></div><div class="mpills"><span class="mp mp-p">35g protein</span><span class="mp mp-c">20g carbs</span><span class="mp mp-f">15g fat</span><span class="mp mp-k">~360 kcal</span></div><div class="meal-body">200g salmon or turkey or 250g firm tofu<br>Roasted zucchini, broccoli, or asparagus · ½ cup brown rice optional</div><div class="meal-note">Lower carbs at dinner — you've already fueled and recovered.</div></div>
+    <div class="meal"><div class="meal-hdr"><span class="meal-name">Evening snack</span><span class="meal-time">8–9pm if hungry</span></div><div class="mpills"><span class="mp mp-p">20g protein</span><span class="mp mp-k">~130 kcal</span></div><div class="meal-body">½ cup cottage cheese + cinnamon or berries · OR plain Greek yogurt</div><div class="meal-note">Casein digests over 6–8 hrs — feeds muscle repair while you sleep.</div></div>
+  </div>
+
+  <div id="n-ndance" class="tpanel">
+    <div class="tip">Wednesday — moderate carbs, high protein. Eat 2 hrs before class. Dance burns more than people think — don't skip post-class protein.</div>
+    <div class="meal"><div class="meal-hdr"><span class="meal-name">Breakfast</span><span class="meal-time">7–8am</span></div><div class="mpills"><span class="mp mp-p">30g protein</span><span class="mp mp-c">35g carbs</span><span class="mp mp-k">~370 kcal</span></div><div class="meal-body">200g plain Greek yogurt · ½ cup oats + berries + handful walnuts</div></div>
+    <div class="meal"><div class="meal-hdr"><span class="meal-name">Lunch</span><span class="meal-time">12–1pm</span></div><div class="mpills"><span class="mp mp-p">35g protein</span><span class="mp mp-c">30g carbs</span><span class="mp mp-f">12g fat</span><span class="mp mp-k">~370 kcal</span></div><div class="meal-body">Tofu stir-fry: 200g firm tofu + edamame + bell peppers + broccoli<br>¾ cup brown rice · soy sauce, ginger, sesame oil</div></div>
+    <div class="meal"><div class="meal-hdr"><span class="meal-name">Pre-dance</span><span class="meal-time">2 hrs before class — light and digestible</span></div><div class="mpills"><span class="mp mp-p">20g protein</span><span class="mp mp-c">30g carbs</span><span class="mp mp-k">~250 kcal</span></div><div class="meal-body">1 cup cottage cheese + banana<br>OR rice cakes + almond butter + honey</div></div>
+    <div class="meal"><div class="meal-hdr"><span class="meal-name">Post-dance</span><span class="meal-time">After class — even if late, eat this</span></div><div class="mpills"><span class="mp mp-p">30g protein</span><span class="mp mp-c">15g carbs</span><span class="mp mp-k">~250 kcal</span></div><div class="meal-body">150g grilled shrimp or chicken or 200g crispy tofu<br>Large veggie side · OR cottage cheese + nuts if very late</div></div>
+  </div>
+
+  <div id="n-nrest" class="tpanel">
+    <div class="tip">Fri, Sat, Sun — same protein, fewer carbs. Your body uses fat for fuel on lower-demand days when glycogen is lower.</div>
+    <div class="meal"><div class="meal-hdr"><span class="meal-name">Breakfast</span><span class="meal-time">8–9am</span></div><div class="mpills"><span class="mp mp-p">30g protein</span><span class="mp mp-c">20g carbs</span><span class="mp mp-f">15g fat</span><span class="mp mp-k">~340 kcal</span></div><div class="meal-body">3 eggs scrambled with spinach + feta · 1 slice sourdough or ½ cup oats</div></div>
+    <div class="meal"><div class="meal-hdr"><span class="meal-name">Lunch</span><span class="meal-time">12–1pm</span></div><div class="mpills"><span class="mp mp-p">35g protein</span><span class="mp mp-c">15g carbs</span><span class="mp mp-f">16g fat</span><span class="mp mp-k">~350 kcal</span></div><div class="meal-body">Large salad with 150g salmon or tuna or 200g crispy tofu<br>Avocado, cucumber, tomato · olive oil + lemon · skip the rice today</div></div>
+    <div class="meal"><div class="meal-hdr"><span class="meal-name">Snack</span><span class="meal-time">3–4pm</span></div><div class="mpills"><span class="mp mp-p">20g protein</span><span class="mp mp-f">8g fat</span><span class="mp mp-k">~180 kcal</span></div><div class="meal-body">½ cup cottage cheese + handful almonds or walnuts</div></div>
+    <div class="meal"><div class="meal-hdr"><span class="meal-name">Dinner</span><span class="meal-time">6–7pm</span></div><div class="mpills"><span class="mp mp-p">35g protein</span><span class="mp mp-c">25g carbs</span><span class="mp mp-f">14g fat</span><span class="mp mp-k">~370 kcal</span></div><div class="meal-body">200g white fish or turkey or 250g firm tofu<br>Roasted sweet potato (small) or lentils · steamed broccoli, zucchini, asparagus</div></div>
+  </div>
+
+  <div id="n-nprot" class="tpanel">
+    <div class="tip">All whole food — no powder as primary source. These hit 120–130g across 4–5 meals. Salmon twice a week is priority — omega-3s reduce joint inflammation for your knees.</div>
+    <div class="prot-grid">
+      <div class="prot-card"><div class="prot-cat">Seafood</div><div class="prot-row"><span>Salmon (150g)</span><span class="prot-amt">30g</span></div><div class="prot-row"><span>Shrimp (150g)</span><span class="prot-amt">28g</span></div><div class="prot-row"><span>Tuna can (130g)</span><span class="prot-amt">30g</span></div><div class="prot-row"><span>White fish (200g)</span><span class="prot-amt">36g</span></div></div>
+      <div class="prot-card"><div class="prot-cat">Dairy & eggs</div><div class="prot-row"><span>Cottage cheese (1 cup)</span><span class="prot-amt">28g</span></div><div class="prot-row"><span>Greek yogurt (200g)</span><span class="prot-amt">20g</span></div><div class="prot-row"><span>3 whole eggs</span><span class="prot-amt">18g</span></div><div class="prot-row"><span>3 eggs + 2 whites</span><span class="prot-amt">26g</span></div></div>
+      <div class="prot-card"><div class="prot-cat">Meat & poultry</div><div class="prot-row"><span>Chicken thigh (200g)</span><span class="prot-amt">38g</span></div><div class="prot-row"><span>Turkey mince (150g)</span><span class="prot-amt">30g</span></div><div class="prot-row"><span>Chicken breast (200g)</span><span class="prot-amt">42g</span></div></div>
+      <div class="prot-card"><div class="prot-cat">Plant-based</div><div class="prot-row"><span>Firm tofu (200g)</span><span class="prot-amt">20g</span></div><div class="prot-row"><span>Edamame (1 cup)</span><span class="prot-amt">17g</span></div><div class="prot-row"><span>Lentils (1 cup cooked)</span><span class="prot-amt">18g</span></div><div class="prot-row"><span>Quinoa (1 cup cooked)</span><span class="prot-amt">8g</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     MEAL PREP PAGE
+══════════════════════════════════════ -->
+<div id="page-mealprep" class="page">
+  <div class="phase-banner">
+    <div><div class="pb-title">Sunday batch cook</div><div class="pb-desc">~2 hours · covers Mon–Thu · tofu included</div></div>
+  </div>
+  <div class="tip">Cook once on Sunday, eat well all week. These 7 components combine into every meal in the plan.</div>
+
+  <div class="sec">Batch cook checklist — Sunday</div>
+  <div class="card">
+    <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Brown rice — 2 cups dry (makes ~5 cups cooked)<span class="cs">Rinse, simmer 40 min. Portion into containers. Mon–Thu post-workout + lunches.</span></div></div>
+    <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Sweet potato — 3–4 medium, cubed and roasted<span class="cs">400°F · 25 min · olive oil + salt. Great pre-workout carb all week.</span></div></div>
+    <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Crispy baked tofu — 400g firm tofu (see guide below)<span class="cs">Press 30 min → cube → marinate → bake 400°F 25–30 min. Use in stir-fries, salads, bowls all week.</span></div></div>
+    <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Salmon fillets — 3 portions (150g each)<span class="cs">Lemon + garlic + olive oil. Bake 400°F 12–15 min. Mon post-workout + Thu or Tue dinner.</span></div></div>
+    <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Chicken thighs — 4 portions (200g each)<span class="cs">Season generously. Bake or pan-cook. Keeps 4 days. Post-workout meals and dinners.</span></div></div>
+    <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Roasted vegetables — large tray<span class="cs">Broccoli, zucchini, bell peppers, asparagus. Olive oil + salt + garlic. 400°F 20 min.</span></div></div>
+    <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Hard boiled eggs — 6 eggs<span class="cs">10 min boil. Peel and store. Quick protein add-on to any meal or snack.</span></div></div>
+    <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Lentils or quinoa — 1 cup dry<span class="cs">Lentils: 20 min simmer. Quinoa: 15 min. Rest day carb base or salad add-in.</span></div></div>
+    <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Portion cottage cheese + Greek yogurt<span class="cs">Divide into ½ cup grab-and-go containers for the week.</span></div></div>
+  </div>
+
+  <div class="sec">Tofu guide — how to make it actually good</div>
+  <div class="card">
+    <div class="tip tip-purple" style="margin-bottom:10px;">Pressing is non-negotiable. Skip it and you get soft, soggy tofu. The water needs to come out for it to crisp properly.</div>
+    <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Press 400g firm tofu between towels · heavy pan on top · 30 min<span class="cs">This is the step most people skip. Don't.</span></div></div>
+    <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Cut into 2cm cubes · toss in marinade<span class="cs">2 tbsp soy + 1 tsp sesame oil + 1 tsp garlic powder + ½ tsp smoked paprika + 1 tsp cornstarch</span></div></div>
+    <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Bake 400°F (200°C) · single layer · flip at 15 min · total 25–30 min<span class="cs">Should be golden and crispy on all sides. Don't crowd the tray.</span></div></div>
+    <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Cool + store airtight · keeps 4 days<span class="cs">Reheat in pan or air fryer 3–4 min to re-crisp. Never microwave — goes soft.</span></div></div>
+    <div style="margin-top:12px;font-size:11px;font-weight:600;color:var(--stone);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;">How to use it through the week</div>
+    <div class="prot-row" style="padding:5px 0;border-bottom:1px solid var(--border);font-size:12px;"><span style="color:var(--stone);">Wed lunch stir-fry</span><span>Tofu + edamame + veg + brown rice · soy + ginger</span></div>
+    <div class="prot-row" style="padding:5px 0;border-bottom:1px solid var(--border);font-size:12px;"><span style="color:var(--stone);">Tue or Thu lunch</span><span>Tofu on salad + avocado + lemon + quinoa</span></div>
+    <div class="prot-row" style="padding:5px 0;border-bottom:1px solid var(--border);font-size:12px;"><span style="color:var(--stone);">Rest day dinner</span><span>Tofu + roasted veg + sweet potato + garlic</span></div>
+    <div class="prot-row" style="padding:5px 0;font-size:12px;"><span style="color:var(--stone);">Quick post-dance</span><span>Cold tofu from fridge + edamame + soy sauce</span></div>
+  </div>
+
+  <div class="sec">Weekly shopping list</div>
+  <div class="prep-grid">
+    <div class="card">
+      <div style="font-size:11px;font-weight:600;color:var(--stone);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;">Protein</div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Salmon fillets (3–4 portions)</div></div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Chicken thighs (800g)</div></div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Firm tofu (2 × 400g blocks)</div></div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Shrimp (200g, frozen ok)</div></div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Tuna cans (3–4)</div></div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Eggs (1 dozen)</div></div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Cottage cheese (large tub)</div></div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Greek yogurt plain (large tub)</div></div>
+    </div>
+    <div class="card">
+      <div style="font-size:11px;font-weight:600;color:var(--stone);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;">Carbs, veg & pantry</div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Brown rice (bag)</div></div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Sweet potatoes (4–5 medium)</div></div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Oats (large container)</div></div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Quinoa or lentils</div></div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Edamame (frozen bag)</div></div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Broccoli, zucchini, asparagus</div></div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Spinach + mixed greens</div></div>
+      <div class="cr" onclick="toggleCheck(this)"><div class="cb"></div><div class="cl">Bananas, berries, avocado</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     PROGRESS PAGE
+══════════════════════════════════════ -->
+<div id="page-progress" class="page">
+
+  <div class="sec">Weight log</div>
+  <div class="card">
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px;">
+      <input class="inp" type="number" id="wgtVal" placeholder="lbs" step="0.1" min="100" max="300" style="width:90px;">
+      <input class="inp" type="date" id="wgtDate" style="flex:1;min-width:130px;">
+      <button class="btn btn-sm" onclick="logWeight()">Log</button>
+    </div>
+    <div id="wgtLog"></div>
+  </div>
+
+  <div class="sec">Lift progress</div>
+  <div class="card">
+    <div style="font-size:12px;color:var(--stone);margin-bottom:12px;">Update when you hit a new top set.</div>
+    <div id="liftSection">
+      <div style="margin-bottom:14px;">
+        <div style="font-size:12px;font-weight:600;margin-bottom:5px;">Hip thrust</div>
+        <div class="pb-wrap"><div class="pb-lbl"><span id="htCur">Current: 185–200 lbs</span><span>Goal: 265 lbs</span></div><div class="pb"><div class="pb-fill" id="htBar" style="width:70%;"></div></div></div>
+        <div style="display:flex;gap:8px;margin-top:6px;"><input class="inp" type="number" id="htVal" placeholder="lbs" style="width:90px;"><button class="btn btn-sm btn-o" onclick="updateLift('ht','Hip thrust',265,'lbs')">Update</button></div>
+      </div>
+      <div style="margin-bottom:14px;">
+        <div style="font-size:12px;font-weight:600;margin-bottom:5px;">Deadlift</div>
+        <div class="pb-wrap"><div class="pb-lbl"><span id="dlCur">Current: 110–120 kg</span><span>Goal: 150 kg</span></div><div class="pb"><div class="pb-fill go" id="dlBar" style="width:78%;"></div></div></div>
+        <div style="display:flex;gap:8px;margin-top:6px;"><input class="inp" type="number" id="dlVal" placeholder="kg" style="width:90px;"><button class="btn btn-sm btn-o" onclick="updateLift('dl','Deadlift',150,'kg')">Update</button></div>
+      </div>
+      <div style="margin-bottom:14px;">
+        <div style="font-size:12px;font-weight:600;margin-bottom:5px;">Hack squat (each side)</div>
+        <div class="pb-wrap"><div class="pb-lbl"><span id="hsCur">Current: 45 kg each</span><span>Goal: 65 kg each</span></div><div class="pb"><div class="pb-fill t" id="hsBar" style="width:69%;"></div></div></div>
+        <div style="display:flex;gap:8px;margin-top:6px;"><input class="inp" type="number" id="hsVal" placeholder="kg each" style="width:90px;"><button class="btn btn-sm btn-o" onclick="updateLift('hs','Hack squat',65,'kg')">Update</button></div>
+      </div>
+      <div>
+        <div style="font-size:12px;font-weight:600;margin-bottom:5px;">Overhead press</div>
+        <div class="pb-wrap"><div class="pb-lbl"><span id="ohpCur">Current: 40 lbs</span><span>Goal: 55 lbs × 3×10</span></div><div class="pb"><div class="pb-fill go" id="ohpBar" style="width:73%;"></div></div></div>
+        <div style="display:flex;gap:8px;margin-top:6px;"><input class="inp" type="number" id="ohpVal" placeholder="lbs" style="width:90px;"><button class="btn btn-sm btn-o" onclick="updateLift('ohp','OHP',55,'lbs')">Update</button></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">Whoop history</div>
+  <div id="whoopHistory"><div class="card" style="font-size:12px;color:var(--stone);">No Whoop entries yet. Log them in Today tab each morning.</div></div>
+
+  <div class="sec">Islamic learning log</div>
+  <div id="learnHistory"><div class="card" style="font-size:12px;color:var(--stone);">No learning entries yet.</div></div>
+
+  <div class="sec">Session notes</div>
+  <div class="card">
+    <textarea class="notes-area" id="noteArea" placeholder="e.g. Mon Mar 24 — hip thrust felt strong at 200lbs, knee fine on hack squat, energy good..."></textarea>
+    <div style="display:flex;gap:8px;margin-top:8px;">
+      <button class="btn btn-sm" onclick="saveNote()">Save note</button>
+      <button class="btn btn-sm btn-o" onclick="document.getElementById('noteArea').value=''">Clear</button>
+    </div>
+    <div id="notesLog" style="margin-top:12px;"></div>
+  </div>
+
+  <div class="sec">Data backup & restore</div>
+  <div class="card">
+    <div style="font-size:12px;color:var(--stone);line-height:1.6;margin-bottom:12px;">Export saves everything — prayers, Whoop logs, weight, lifts, learning, notes — as a file on your device. Import restores it on any device or browser.</div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;">
+      <button class="btn btn-sm" onclick="exportData()" style="background:var(--sage);border-color:var(--sage);">Export my data</button>
+      <button class="btn btn-sm btn-o" onclick="document.getElementById('importFile').click()">Import backup</button>
+      <input type="file" id="importFile" accept=".json" style="display:none;" onchange="importData(event)">
+    </div>
+    <div id="backupMsg" style="font-size:12px;color:var(--sage);min-height:16px;"></div>
+    <div style="font-size:11px;color:var(--stone);margin-top:8px;padding-top:8px;border-top:1px solid var(--border);">Tip: export once a week and save the file to your Notes app or iCloud Drive so it's always backed up.</div>
+  </div>
+</div>
+
+</div><!-- end main -->
+
+<script>
+// ─── COUNTDOWN ───────────────────────────────
+function updateCountdown() {
+  const target = new Date('2025-07-11T00:00:00');
+  const now = new Date();
+  const diff = Math.ceil((target - now) / (1000*60*60*24));
+  document.getElementById('daysLeft').textContent = Math.max(0, diff);
+}
+updateCountdown();
+setInterval(updateCountdown, 60000);
+
+// ─── PAGE NAV ────────────────────────────────
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nb').forEach(b => b.classList.remove('active'));
+  document.getElementById('page-'+id).classList.add('active');
+  event.target.classList.add('active');
+}
+
+// ─── TAB NAV (within page) ───────────────────
+function showTab(prefix, id) {
+  const panels = document.querySelectorAll('[id^="'+prefix+'-"]');
+  panels.forEach(p => p.classList.remove('active'));
+  const tabs = event.target.closest('.tab-row') ? event.target.closest('.tab-row').querySelectorAll('.tab') : [];
+  tabs.forEach(t => t.classList.remove('active'));
+  document.getElementById(prefix+'-'+id).classList.add('active');
+  event.target.classList.add('active');
+}
+
+// ─── STORAGE HELPERS ─────────────────────────
+const S = {
+  get: k => { try { return JSON.parse(localStorage.getItem(k)); } catch(e) { return null; } },
+  set: (k,v) => localStorage.setItem(k, JSON.stringify(v)),
+};
+const today = () => new Date().toISOString().split('T')[0];
+const fmtDate = d => new Date(d+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric'});
+
+// ─── PERIOD MODE ─────────────────────────────
+let periodOn = S.get('periodOn') || false;
+function togglePeriod() {
+  periodOn = !periodOn;
+  S.set('periodOn', periodOn);
+  renderPrayerState();
+}
+function renderPrayerState() {
+  const toggle = document.getElementById('periodToggle');
+  const text = document.getElementById('periodText');
+  const sub = document.getElementById('periodSub');
+  toggle.classList.toggle('on', periodOn);
+  text.textContent = periodOn ? 'Period mode: on — prayers paused' : 'Period mode: off';
+  sub.textContent = periodOn ? 'Prayers are exempt during your cycle. Rest and recover.' : 'Tap to enable — prayers paused during your cycle';
+  const prayers = ['fajr','zuhr','asr','maghrib','isha'];
+  prayers.forEach(p => {
+    const btn = document.getElementById('p-'+p);
+    if (periodOn) {
+      btn.classList.add('period-exempt');
+      btn.classList.remove('prayed');
+      btn.onclick = null;
+    } else {
+      btn.classList.remove('period-exempt');
+      btn.onclick = () => togglePrayer(p);
+      const prayed = (S.get('prayers_'+today()) || {})[p];
+      btn.classList.toggle('prayed', !!prayed);
+    }
+  });
+  updatePrayerSummary();
+}
+
+// ─── PRAYER TRACKER ──────────────────────────
+function togglePrayer(name) {
+  if (periodOn) return;
+  const key = 'prayers_'+today();
+  const data = S.get(key) || {};
+  data[name] = !data[name];
+  S.set(key, data);
+  document.getElementById('p-'+name).classList.toggle('prayed', !!data[name]);
+  updatePrayerSummary();
+}
+function updatePrayerSummary() {
+  if (periodOn) {
+    document.getElementById('sum-prayers').textContent = 'Exempt';
+    document.getElementById('prayerMsg').textContent = 'Rest and take care of yourself.';
+    return;
+  }
+  const data = S.get('prayers_'+today()) || {};
+  const prayers = ['fajr','zuhr','asr','maghrib','isha'];
+  const done = prayers.filter(p => data[p]).length;
+  document.getElementById('sum-prayers').textContent = done+'/5';
+  const msgs = ['','Fajr done — start of a blessed day.','Keep going — 3 more to go.','Halfway there — stay consistent.','Almost complete — just Isha left.','All 5 prayers complete. Alhamdulillah.'];
+  document.getElementById('prayerMsg').textContent = msgs[done] || '';
+}
+function loadPrayers() {
+  if (!periodOn) {
+    const data = S.get('prayers_'+today()) || {};
+    ['fajr','zuhr','asr','maghrib','isha'].forEach(p => {
+      document.getElementById('p-'+p).classList.toggle('prayed', !!data[p]);
+    });
+  }
+  renderPrayerState();
+}
+
+// ─── ISLAMIC LEARNING ────────────────────────
+function logLearning() {
+  const type = document.getElementById('learnType').value;
+  const mins = parseInt(document.getElementById('learnMinutes').value) || 0;
+  const topic = document.getElementById('learnTopic').value.trim();
+  if (!mins) return;
+  const log = S.get('learnLog') || [];
+  log.unshift({ date: today(), type, mins, topic });
+  S.set('learnLog', log);
+  document.getElementById('learnMinutes').value = '';
+  document.getElementById('learnTopic').value = '';
+  updateLearnSummary();
+  renderLearnHistory();
+  document.getElementById('learnDone').textContent = '+ Logged ' + mins + ' min of ' + type;
+}
+function updateLearnSummary() {
+  const log = S.get('learnLog') || [];
+  const todayEntries = log.filter(e => e.date === today());
+  const total = todayEntries.reduce((s,e) => s+e.mins, 0);
+  const pct = Math.min(total/10*100, 100);
+  document.getElementById('learnBar').style.width = pct+'%';
+  document.getElementById('learnMinsLabel').textContent = total + ' min / 10 min goal';
+  document.getElementById('sum-learn').textContent = total >= 10 ? '✓' : total+'min';
+}
+function renderLearnHistory() {
+  const log = S.get('learnLog') || [];
+  const el = document.getElementById('learnHistory');
+  if (!el) return;
+  if (!log.length) { el.innerHTML = '<div class="card" style="font-size:12px;color:var(--stone);">No learning entries yet.</div>'; return; }
+  el.innerHTML = '<div class="card">' + log.slice(0,15).map(e => `
+    <div class="learn-entry">
+      <span class="learn-date">${fmtDate(e.date)}</span>
+      <span class="learn-type">${e.type}</span>
+      <span style="font-size:11px;color:var(--stone);margin-left:6px;">${e.mins} min</span>
+      ${e.topic ? '<div class="learn-note">'+e.topic+'</div>' : ''}
+    </div>`).join('') + '</div>';
+}
+
+// ─── STEPS ───────────────────────────────────
+function logSteps() {
+  const val = parseInt(document.getElementById('stepsInput').value) || 0;
+  S.set('steps_'+today(), val);
+  document.getElementById('stepsInput').value = '';
+  updateStepsSummary();
+}
+function updateStepsSummary() {
+  const val = S.get('steps_'+today()) || 0;
+  const pct = Math.min(val/10000*100, 100);
+  document.getElementById('stepsBar').style.width = pct+'%';
+  document.getElementById('stepsLabel').textContent = val.toLocaleString() + ' steps';
+  document.getElementById('sum-steps').textContent = val >= 10000 ? '✓' : val.toLocaleString();
+  const remaining = Math.max(0, 10000-val);
+  document.getElementById('stepsMsg').textContent = val >= 10000 ? 'Goal reached!' : remaining.toLocaleString() + ' steps to go';
+}
+
+// ─── WHOOP ───────────────────────────────────
+let pendingWhoopImgs = [];
+function previewWhoopImgs(e) {
+  const files = Array.from(e.target.files);
+  const preview = document.getElementById('whoopImgPreview');
+  files.forEach(file => {
+    const reader = new FileReader();
+    reader.onload = ev => {
+      pendingWhoopImgs.push(ev.target.result);
+      const img = document.createElement('img');
+      img.src = ev.target.result;
+      img.className = 'img-thumb';
+      img.onclick = () => { window.open(ev.target.result); };
+      preview.appendChild(img);
+    };
+    reader.readAsDataURL(file);
+  });
+}
+function logWhoop() {
+  const rec = parseInt(document.getElementById('wRec').value);
+  const sleep = parseInt(document.getElementById('wSleep').value) || null;
+  const hrv = parseInt(document.getElementById('wHRV').value) || null;
+  const note = document.getElementById('wNote').value.trim();
+  if (!rec) { document.getElementById('whoopMsg').textContent = 'Enter your recovery % to save.'; return; }
+  const log = S.get('whoopLog') || [];
+  log.unshift({ date: today(), rec, sleep, hrv, note, imgs: [...pendingWhoopImgs] });
+  S.set('whoopLog', log);
+  document.getElementById('wRec').value = '';
+  document.getElementById('wSleep').value = '';
+  document.getElementById('wHRV').value = '';
+  document.getElementById('wNote').value = '';
+  document.getElementById('whoopImgPreview').innerHTML = '';
+  pendingWhoopImgs = [];
+  document.getElementById('whoopMsg').textContent = 'Saved! Recovery: '+rec+'%';
+  document.getElementById('sum-recovery').textContent = rec+'%';
+  document.getElementById('sum-recovery').style.color = rec>=67?'var(--sage)':rec>=50?'var(--gold)':'var(--terra)';
+  renderWhoopHistory();
+}
+function renderWhoopHistory() {
+  const log = S.get('whoopLog') || [];
+  const el = document.getElementById('whoopHistory');
+  if (!el) return;
+  if (!log.length) { el.innerHTML = '<div class="card" style="font-size:12px;color:var(--stone);">No Whoop entries yet. Log them in the Today tab each morning.</div>'; return; }
+  const recCol = r => r>=67?'rec-green':r>=50?'rec-yellow':'rec-red';
+  el.innerHTML = log.slice(0,10).map(e => `
+    <div class="whoop-entry">
+      <div class="we-header">
+        <span class="we-date">${fmtDate(e.date)}</span>
+        <span class="we-rec ${recCol(e.rec)}">${e.rec}% recovery</span>
+      </div>
+      <div class="we-stats">
+        ${e.sleep ? '<span>Sleep: '+e.sleep+'%</span>' : ''}
+        ${e.hrv ? '<span>HRV: '+e.hrv+'ms</span>' : ''}
+      </div>
+      ${e.note ? '<div class="we-note">'+e.note+'</div>' : ''}
+      ${e.imgs && e.imgs.length ? '<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px;">'+e.imgs.map(img => '<img src="'+img+'" class="img-thumb" onclick="window.open(this.src)">').join('')+'</div>' : ''}
+    </div>`).join('');
+}
+
+// ─── WEEK DAYS ───────────────────────────────
+function weekKey() {
+  const now = new Date(); const y = now.getFullYear();
+  const start = new Date(y,0,1);
+  return y+'W'+Math.ceil(((now-start)/86400000+start.getDay()+1)/7);
+}
+function toggleDay(el, day) {
+  el.classList.toggle('done');
+  const key = 'days_'+weekKey();
+  const data = S.get(key) || {};
+  data[day] = el.classList.contains('done');
+  S.set(key, data);
+  const wDone = Object.values(data).filter(Boolean).length;
+  document.getElementById('sum-workout').textContent = wDone+' done';
+}
+function loadDays() {
+  const data = S.get('days_'+weekKey()) || {};
+  const map = {mon:0,tue:1,wed:2,thu:3,fri:4,sat:5,sun:6};
+  const wds = document.querySelectorAll('.wd');
+  Object.entries(data).forEach(([day,done]) => {
+    if (done && map[day] !== undefined) wds[map[day]].classList.add('done');
+  });
+  const wDone = Object.values(data).filter(Boolean).length;
+  document.getElementById('sum-workout').textContent = wDone ? wDone+' done' : '—';
+}
+
+// ─── CHECKS ──────────────────────────────────
+function toggleCheck(el) {
+  el.classList.toggle('checked');
+  saveChecks();
+}
+function saveChecks() {
+  const checks = {};
+  document.querySelectorAll('.cr').forEach((el,i) => { checks[i] = el.classList.contains('checked'); });
+  S.set('checks', checks);
+}
+function loadChecks() {
+  const checks = S.get('checks') || {};
+  document.querySelectorAll('.cr').forEach((el,i) => { if(checks[i]) el.classList.add('checked'); });
+}
+
+// ─── WEIGHT ──────────────────────────────────
+function logWeight() {
+  const val = parseFloat(document.getElementById('wgtVal').value);
+  const date = document.getElementById('wgtDate').value;
+  if (!val || !date) return;
+  const log = S.get('wgtLog') || [];
+  log.unshift({val, date});
+  S.set('wgtLog', log);
+  document.getElementById('wgtVal').value = '';
+  renderWeightLog();
+}
+function renderWeightLog() {
+  const log = S.get('wgtLog') || [];
+  const el = document.getElementById('wgtLog');
+  if (!log.length) { el.innerHTML = '<div style="font-size:12px;color:var(--stone);">No entries yet.</div>'; return; }
+  el.innerHTML = log.slice(0,8).map(e => {
+    const diff = (e.val - 136).toFixed(1);
+    const col = e.val < 136 ? 'var(--sage)' : e.val > 137 ? 'var(--terra)' : 'var(--stone)';
+    const arrow = e.val < 136 ? '▼ '+Math.abs(diff) : e.val > 136 ? '▲ +'+diff : '—';
+    return `<div class="wl-entry"><span>${fmtDate(e.date)}</span><span style="font-weight:500;">${e.val} lbs</span><span style="color:${col};">${arrow}</span></div>`;
+  }).join('');
+  document.getElementById('sum-steps'); // already handled
+}
+
+// ─── LIFTS ───────────────────────────────────
+function updateLift(key, name, goal, unit) {
+  const val = parseFloat(document.getElementById(key+'Val').value);
+  if (!val) return;
+  S.set('lift_'+key, val);
+  document.getElementById(key+'Cur').textContent = 'Current: '+val+' '+unit;
+  const pct = Math.min(Math.round(val/goal*100),100);
+  document.getElementById(key+'Bar').style.width = pct+'%';
+  document.getElementById(key+'Val').value = '';
+}
+function loadLifts() {
+  [['ht',265,'lbs'],['dl',150,'kg'],['hs',65,'kg'],['ohp',55,'lbs']].forEach(([key,goal,unit]) => {
+    const val = S.get('lift_'+key);
+    if (val) {
+      document.getElementById(key+'Cur').textContent = 'Current: '+val+' '+unit;
+      document.getElementById(key+'Bar').style.width = Math.min(Math.round(val/goal*100),100)+'%';
+    }
+  });
+}
+
+// ─── NOTES ───────────────────────────────────
+function saveNote() {
+  const text = document.getElementById('noteArea').value.trim();
+  if (!text) return;
+  const log = S.get('notesLog') || [];
+  const d = new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+  log.unshift({date:d, text});
+  S.set('notesLog', log);
+  document.getElementById('noteArea').value = '';
+  renderNotes();
+}
+function renderNotes() {
+  const log = S.get('notesLog') || [];
+  const el = document.getElementById('notesLog');
+  if (!log.length || !el) return;
+  el.innerHTML = log.slice(0,5).map(n => `
+    <div style="padding:9px 0;border-bottom:1px solid var(--border);">
+      <div style="font-size:10px;font-weight:600;color:var(--stone);text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px;">${n.date}</div>
+      <div style="font-size:12px;color:var(--charcoal);line-height:1.5;">${n.text}</div>
+    </div>`).join('');
+}
+
+// ─── EXPORT / IMPORT ─────────────────────────
+function exportData() {
+  const keys = Object.keys(localStorage);
+  const data = {};
+  keys.forEach(k => { data[k] = localStorage.getItem(k); });
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  const dateStr = new Date().toISOString().split('T')[0];
+  a.href = url;
+  a.download = 'lockin-backup-' + dateStr + '.json';
+  a.click();
+  URL.revokeObjectURL(url);
+  document.getElementById('backupMsg').textContent = 'Exported! Save this file somewhere safe.';
+}
+
+function importData(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    try {
+      const data = JSON.parse(ev.target.result);
+      Object.entries(data).forEach(([k, v]) => localStorage.setItem(k, v));
+      document.getElementById('backupMsg').textContent = 'Imported successfully — reloading...';
+      setTimeout(() => location.reload(), 1200);
+    } catch(err) {
+      document.getElementById('backupMsg').textContent = 'Error reading file — make sure it\'s a valid backup.';
+      document.getElementById('backupMsg').style.color = 'var(--terra)';
+    }
+  };
+  reader.readAsText(file);
+  e.target.value = '';
+}
+
+// ─── INIT ────────────────────────────────────
+function init() {
+  document.getElementById('wgtDate').value = today();
+  loadPrayers();
+  loadDays();
+  loadChecks();
+  loadLifts();
+  updateLearnSummary();
+  updateStepsSummary();
+  renderWhoopHistory();
+  renderWeightLog();
+  renderLearnHistory();
+  renderNotes();
+  // restore today's whoop summary
+  const wLog = S.get('whoopLog') || [];
+  const todayW = wLog.find(e => e.date === today());
+  if (todayW) {
+    document.getElementById('sum-recovery').textContent = todayW.rec+'%';
+    document.getElementById('sum-recovery').style.color = todayW.rec>=67?'var(--sage)':todayW.rec>=50?'var(--gold)':'var(--terra)';
+  }
+}
+init();
+</script>
+</body>
+</html>
